@@ -33,7 +33,7 @@ const Contact = () => {
     
     try {
       const templateParams = {
-        to_email: 'liviu3667@gmail.com',
+        to_email: 'orders@liviuthecopywriter.com',
         from_name: formData.name,
         from_email: formData.email,
         subject: formData.subject,
@@ -42,8 +42,8 @@ const Contact = () => {
       };
 
       await emailjs.send(
-        'service_az9nnbo', // Your actual service ID from the screenshot
-        'template_contact', // You'll need to create this template in EmailJS
+        'service_az9nnbo',
+        'template_contact',
         templateParams
       );
 
