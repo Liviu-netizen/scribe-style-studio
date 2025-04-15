@@ -36,19 +36,19 @@ const Services = () => {
               <div className="space-y-3 mb-6">
                 <div className="flex items-start">
                   <CheckCircle className="text-navy-600 mr-2 h-5 w-5 mt-0.5" />
-                  <span>{t("services.website.feature1") || "Homepage & landing page copy that converts"}</span>
+                  <span>{t("services.website.feature1")}</span>
                 </div>
                 <div className="flex items-start">
                   <CheckCircle className="text-navy-600 mr-2 h-5 w-5 mt-0.5" />
-                  <span>{t("services.website.feature2") || "Product and service descriptions"}</span>
+                  <span>{t("services.website.feature2")}</span>
                 </div>
                 <div className="flex items-start">
                   <CheckCircle className="text-navy-600 mr-2 h-5 w-5 mt-0.5" />
-                  <span>{t("services.website.feature3") || "About page narratives that build trust"}</span>
+                  <span>{t("services.website.feature3")}</span>
                 </div>
                 <div className="flex items-start">
                   <CheckCircle className="text-navy-600 mr-2 h-5 w-5 mt-0.5" />
-                  <span>{t("services.website.feature4") || "SEO-optimized content that ranks"}</span>
+                  <span>{t("services.website.feature4")}</span>
                 </div>
               </div>
               <Link to="/contact" className="btn-primary inline-flex items-center">
@@ -81,19 +81,19 @@ const Services = () => {
               <div className="space-y-3 mb-6">
                 <div className="flex items-start">
                   <CheckCircle className="text-navy-600 mr-2 h-5 w-5 mt-0.5" />
-                  <span>{t("services.social.feature1") || "Platform-specific content strategy"}</span>
+                  <span>{t("services.social.feature1")}</span>
                 </div>
                 <div className="flex items-start">
                   <CheckCircle className="text-navy-600 mr-2 h-5 w-5 mt-0.5" />
-                  <span>{t("services.social.feature2") || "Engaging post captions and copy"}</span>
+                  <span>{t("services.social.feature2")}</span>
                 </div>
                 <div className="flex items-start">
                   <CheckCircle className="text-navy-600 mr-2 h-5 w-5 mt-0.5" />
-                  <span>{t("services.social.feature3") || "Bio and profile optimization"}</span>
+                  <span>{t("services.social.feature3")}</span>
                 </div>
                 <div className="flex items-start">
                   <CheckCircle className="text-navy-600 mr-2 h-5 w-5 mt-0.5" />
-                  <span>{t("services.social.feature4") || "Content calendar development"}</span>
+                  <span>{t("services.social.feature4")}</span>
                 </div>
               </div>
               <Link to="/contact" className="btn-primary inline-flex items-center">
@@ -107,7 +107,7 @@ const Services = () => {
                 </div>
               </div>
               <p className="text-navy-700 italic">
-                {t("services.social.testimonial") || "Our engagement has doubled since implementing the new social media content strategy and copy."}
+                {t("services.social.testimonial")}
               </p>
               <p className="text-navy-500 text-sm mt-2">— Recent Client</p>
             </div>
@@ -126,19 +126,19 @@ const Services = () => {
               <div className="space-y-3 mb-6">
                 <div className="flex items-start">
                   <CheckCircle className="text-navy-600 mr-2 h-5 w-5 mt-0.5" />
-                  <span>{t("services.email.feature1") || "Attention-grabbing subject lines"}</span>
+                  <span>{t("services.email.feature1")}</span>
                 </div>
                 <div className="flex items-start">
                   <CheckCircle className="text-navy-600 mr-2 h-5 w-5 mt-0.5" />
-                  <span>{t("services.email.feature2") || "Nurture and onboarding sequences"}</span>
+                  <span>{t("services.email.feature2")}</span>
                 </div>
                 <div className="flex items-start">
                   <CheckCircle className="text-navy-600 mr-2 h-5 w-5 mt-0.5" />
-                  <span>{t("services.email.feature3") || "Sales and promotional emails"}</span>
+                  <span>{t("services.email.feature3")}</span>
                 </div>
                 <div className="flex items-start">
                   <CheckCircle className="text-navy-600 mr-2 h-5 w-5 mt-0.5" />
-                  <span>{t("services.email.feature4") || "Follow-up and re-engagement campaigns"}</span>
+                  <span>{t("services.email.feature4")}</span>
                 </div>
               </div>
               <Link to="/contact" className="btn-primary inline-flex items-center">
@@ -164,26 +164,26 @@ const Services = () => {
               <div className="bg-navy-50 p-3 rounded-full w-fit mb-4">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-navy-600"><path d="M12 2v6.5"></path><path d="M16 2v6.5"></path><path d="M8 2v6.5"></path><path d="M2 9.5h20"></path><path d="M18 7v11a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V7"></path></svg>
               </div>
-              <h2 className="text-navy-800 mb-4">{t("services.blog.title") || "Blog & Content Writing"}</h2>
+              <h2 className="text-navy-800 mb-4">{t("services.blog.title")}</h2>
               <p className="text-navy-700 mb-6">
-                {t("services.blog.description") || "Informative, engaging blog posts and articles that establish your authority in your industry, improve your SEO rankings, and provide value to your audience."}
+                {t("services.blog.description")}
               </p>
               <div className="space-y-3 mb-6">
                 <div className="flex items-start">
                   <CheckCircle className="text-navy-600 mr-2 h-5 w-5 mt-0.5" />
-                  <span>{t("services.blog.feature1") || "SEO-optimized blog articles"}</span>
+                  <span>{t("services.blog.feature1")}</span>
                 </div>
                 <div className="flex items-start">
                   <CheckCircle className="text-navy-600 mr-2 h-5 w-5 mt-0.5" />
-                  <span>{t("services.blog.feature2") || "Industry thought leadership pieces"}</span>
+                  <span>{t("services.blog.feature2")}</span>
                 </div>
                 <div className="flex items-start">
                   <CheckCircle className="text-navy-600 mr-2 h-5 w-5 mt-0.5" />
-                  <span>{t("services.blog.feature3") || "Educational guides and tutorials"}</span>
+                  <span>{t("services.blog.feature3")}</span>
                 </div>
                 <div className="flex items-start">
                   <CheckCircle className="text-navy-600 mr-2 h-5 w-5 mt-0.5" />
-                  <span>{t("services.blog.feature4") || "Content strategy development"}</span>
+                  <span>{t("services.blog.feature4")}</span>
                 </div>
               </div>
               <Link to="/contact" className="btn-primary inline-flex items-center">
@@ -197,7 +197,7 @@ const Services = () => {
                 </div>
               </div>
               <p className="text-navy-700 italic">
-                {t("services.blog.testimonial") || "The blog articles consistently rank on page one of Google and have established us as a thought leader in our industry."}
+                {t("services.blog.testimonial")}
               </p>
               <p className="text-navy-500 text-sm mt-2">— Recent Client</p>
             </div>
@@ -209,9 +209,9 @@ const Services = () => {
       <section className="bg-cream-50 section">
         <div className="container-custom">
           <div className="text-center mb-12">
-            <h2 className="text-navy-800 mb-4">{t("services.process.title") || "My Process"}</h2>
+            <h2 className="text-navy-800 mb-4">{t("services.process.title")}</h2>
             <p className="max-w-2xl mx-auto text-navy-700">
-              {t("services.process.subtitle") || "A collaborative approach to creating copy that delivers results."}
+              {t("services.process.subtitle")}
             </p>
           </div>
           
@@ -219,36 +219,36 @@ const Services = () => {
             {/* Step 1 */}
             <div className="bg-white p-6 rounded-lg shadow-sm relative">
               <div className="text-navy-600 mb-4 text-xl font-medium font-serif">01</div>
-              <h3 className="text-xl mb-3">{t("services.process.step1.title") || "Discovery"}</h3>
+              <h3 className="text-xl mb-3">{t("services.process.step1.title")}</h3>
               <p className="text-navy-600">
-                {t("services.process.step1.description") || "We start with a thorough understanding of your business, audience, and objectives."}
+                {t("services.process.step1.description")}
               </p>
             </div>
             
             {/* Step 2 */}
             <div className="bg-white p-6 rounded-lg shadow-sm">
               <div className="text-navy-600 mb-4 text-xl font-medium font-serif">02</div>
-              <h3 className="text-xl mb-3">{t("services.process.step2.title") || "Strategy"}</h3>
+              <h3 className="text-xl mb-3">{t("services.process.step2.title")}</h3>
               <p className="text-navy-600">
-                {t("services.process.step2.description") || "I develop a customized approach based on research and best practices."}
+                {t("services.process.step2.description")}
               </p>
             </div>
             
             {/* Step 3 */}
             <div className="bg-white p-6 rounded-lg shadow-sm">
               <div className="text-navy-600 mb-4 text-xl font-medium font-serif">03</div>
-              <h3 className="text-xl mb-3">{t("services.process.step3.title") || "Creation"}</h3>
+              <h3 className="text-xl mb-3">{t("services.process.step3.title")}</h3>
               <p className="text-navy-600">
-                {t("services.process.step3.description") || "I craft compelling copy that aligns with your brand voice and goals."}
+                {t("services.process.step3.description")}
               </p>
             </div>
             
             {/* Step 4 */}
             <div className="bg-white p-6 rounded-lg shadow-sm">
               <div className="text-navy-600 mb-4 text-xl font-medium font-serif">04</div>
-              <h3 className="text-xl mb-3">{t("services.process.step4.title") || "Refinement"}</h3>
+              <h3 className="text-xl mb-3">{t("services.process.step4.title")}</h3>
               <p className="text-navy-600">
-                {t("services.process.step4.description") || "We collaborate on revisions until the copy perfectly meets your needs."}
+                {t("services.process.step4.description")}
               </p>
             </div>
           </div>
