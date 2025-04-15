@@ -15,7 +15,7 @@ const Navbar = () => {
     <header className="sticky top-0 z-50 bg-background/90 backdrop-blur-md border-b border-slate-100">
       <div className="container-custom flex items-center justify-between py-4">
         <Link to="/" className="text-2xl font-serif font-medium text-navy-900">
-          WordCraft
+          Liviu M.C.
         </Link>
         
         {/* Desktop Menu */}

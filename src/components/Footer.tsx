@@ -10,7 +10,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Brand Column */}
           <div className="space-y-4">
-            <Link to="/" className="text-2xl font-serif font-medium">WordCraft</Link>
+            <Link to="/" className="text-2xl font-serif font-medium">Liviu M.C.</Link>
             <p className="text-slate-300 max-w-xs">
               Crafting compelling copy that converts casual readers into loyal customers.
             </p>
@@ -45,7 +45,7 @@ const Footer = () => {
             <div className="space-y-3 text-slate-300">
               <div className="flex items-start">
                 <Mail className="mr-2 h-5 w-5 shrink-0" />
-                <span>hello@wordcraft.com</span>
+                <span>hello@liviumc.com</span>
               </div>
               <div className="flex items-start">
                 <Phone className="mr-2 h-5 w-5 shrink-0" />
@@ -53,14 +53,14 @@ const Footer = () => {
               </div>
               <div className="flex items-start">
                 <MapPin className="mr-2 h-5 w-5 shrink-0" />
-                <span>123 Writing Lane, Word City</span>
+                <span>Copywriting Studio, Word City</span>
               </div>
             </div>
           </div>
         </div>
         
         <div className="border-t border-navy-700 mt-10 pt-6 text-center text-slate-400 text-sm">
-          <p>© {new Date().getFullYear()} WordCraft Copywriting. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Liviu M.C. Copywriting. Designed and developed by Liviu M.C.</p>
         </div>
       </div>
     </footer>
