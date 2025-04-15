@@ -3,8 +3,11 @@ import React, { useState } from 'react';
 import Layout from '@/components/Layout';
 import { Mail, Phone, MapPin, Send, ExternalLink } from 'lucide-react';
 import { toast } from '@/components/ui/use-toast';
+import { useLanguage } from '@/context/LanguageContext';
 
 const Contact = () => {
+  const { t } = useLanguage();
+  
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -61,9 +64,9 @@ const Contact = () => {
     <Layout>
       <section className="bg-navy-700 text-white py-16">
         <div className="container-custom">
-          <h1 className="text-center mb-4">Contact Me</h1>
+          <h1 className="text-center mb-4">{t("contact.hero.title")}</h1>
           <p className="max-w-2xl mx-auto text-center text-xl text-slate-200">
-            Let's discuss how I can help you with your copywriting needs.
+            {t("contact.hero.subtitle")}
           </p>
         </div>
       </section>
@@ -72,9 +75,9 @@ const Contact = () => {
         <div className="container-custom">
           <div className="grid md:grid-cols-2 gap-12">
             <div>
-              <h2 className="text-navy-800 mb-6">Get in Touch</h2>
+              <h2 className="text-navy-800 mb-6">{t("contact.hero.title")}</h2>
               <p className="text-navy-700 mb-8">
-                Have a project in mind or want to discuss how copywriting can help your business? I'd love to hear from you. Fill out the form or reach out directly using the contact information below.
+                {t("contact.hero.subtitle")}
               </p>
               
               <div className="space-y-6 mb-8">
@@ -95,7 +98,7 @@ const Contact = () => {
                     <Phone className="text-navy-600 h-5 w-5" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-medium mb-1">Phone</h3>
+                    <h3 className="text-lg font-medium mb-1">{t("contact.alt.phone")}</h3>
                     <p className="text-navy-600">+40730377130</p>
                   </div>
                 </div>
@@ -105,7 +108,7 @@ const Contact = () => {
                     <MapPin className="text-navy-600 h-5 w-5" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-medium mb-1">Location</h3>
+                    <h3 className="text-lg font-medium mb-1">{t("about.industries.industry6")}</h3>
                     <p className="text-navy-600">Bucharest, Romania</p>
                   </div>
                 </div>
@@ -140,11 +143,11 @@ const Contact = () => {
             
             <div>
               <div className="bg-white p-6 rounded-lg shadow-sm border border-slate-100">
-                <h2 className="text-navy-800 mb-6">Send a Message</h2>
+                <h2 className="text-navy-800 mb-6">{t("contact.form.submit")}</h2>
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium mb-1 text-navy-700">
-                      Name
+                      {t("contact.form.name")}
                     </label>
                     <input
                       id="name"
@@ -159,7 +162,7 @@ const Contact = () => {
                   
                   <div>
                     <label htmlFor="email" className="block text-sm font-medium mb-1 text-navy-700">
-                      Email
+                      {t("contact.form.email")}
                     </label>
                     <input
                       id="email"
@@ -209,7 +212,7 @@ const Contact = () => {
                   
                   <div>
                     <label htmlFor="message" className="block text-sm font-medium mb-1 text-navy-700">
-                      Message
+                      {t("contact.form.message")}
                     </label>
                     <textarea
                       id="message"
@@ -226,7 +229,7 @@ const Contact = () => {
                     type="submit"
                     className="w-full py-3 px-4 bg-navy-600 text-white rounded-md font-medium flex items-center justify-center transition hover:bg-navy-700"
                   >
-                    Send Message <Send className="ml-2 h-4 w-4" />
+                    {t("contact.form.submit")} <Send className="ml-2 h-4 w-4" />
                   </button>
                 </form>
               </div>

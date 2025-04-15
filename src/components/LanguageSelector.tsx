@@ -4,7 +4,7 @@ import { useLanguage, Language } from '@/context/LanguageContext';
 import { cn } from '@/lib/utils';
 
 const LanguageSelector = () => {
-  const { language, setLanguage } = useLanguage();
+  const { language, setLanguage, t } = useLanguage();
 
   const handleLanguageChange = (newLanguage: Language) => {
     setLanguage(newLanguage);
@@ -20,7 +20,7 @@ const LanguageSelector = () => {
             ? "bg-navy-700 text-white" 
             : "text-slate-300 hover:text-white"
         )}
-        aria-label="Switch to English"
+        aria-label={t("language.select") + " English"}
       >
         EN
       </button>
@@ -33,7 +33,7 @@ const LanguageSelector = () => {
             ? "bg-navy-700 text-white" 
             : "text-slate-300 hover:text-white"
         )}
-        aria-label="Switch to Romanian"
+        aria-label={t("language.select") + " Romanian"}
       >
         RO
       </button>

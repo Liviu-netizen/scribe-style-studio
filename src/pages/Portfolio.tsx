@@ -3,16 +3,19 @@ import React from 'react';
 import Layout from '@/components/Layout';
 import { Link } from 'react-router-dom';
 import { ExternalLink, ArrowRight } from 'lucide-react';
+import { useLanguage } from '@/context/LanguageContext';
 
 const Portfolio = () => {
+  const { t } = useLanguage();
+  
   return (
     <Layout>
       {/* Hero Section */}
       <section className="bg-navy-700 text-white py-16">
         <div className="container-custom">
-          <h1 className="text-center mb-4">Portfolio</h1>
+          <h1 className="text-center mb-4">{t("portfolio.hero.title")}</h1>
           <p className="max-w-2xl mx-auto text-center text-xl text-slate-200">
-            Explore a selection of my copywriting projects across various industries.
+            {t("portfolio.hero.subtitle")}
           </p>
         </div>
       </section>
@@ -31,15 +34,15 @@ const Portfolio = () => {
               </div>
               <div className="p-6">
                 <div className="flex items-center justify-between mb-3">
-                  <span className="text-xs font-medium py-1 px-2 rounded-full bg-navy-50 text-navy-700">Website Copy</span>
-                  <span className="text-navy-500 text-sm">2023</span>
+                  <span className="text-xs font-medium py-1 px-2 rounded-full bg-navy-50 text-navy-700">{t("portfolio.project1.type")}</span>
+                  <span className="text-navy-500 text-sm">{t("portfolio.project1.year")}</span>
                 </div>
-                <h3 className="text-xl font-medium mb-2">TechStart SaaS Platform</h3>
+                <h3 className="text-xl font-medium mb-2">{t("portfolio.project1.title")}</h3>
                 <p className="text-navy-600 mb-4">
-                  Complete website copy for a SaaS platform, including homepage, product pages, and pricing page.
+                  {t("portfolio.project1.description")}
                 </p>
                 <a href="#" className="text-navy-700 font-medium flex items-center hover:text-navy-500 transition">
-                  View Project <ExternalLink className="ml-1 h-4 w-4" />
+                  {t("portfolio.project1.link")} <ExternalLink className="ml-1 h-4 w-4" />
                 </a>
               </div>
             </div>
@@ -54,15 +57,15 @@ const Portfolio = () => {
               </div>
               <div className="p-6">
                 <div className="flex items-center justify-between mb-3">
-                  <span className="text-xs font-medium py-1 px-2 rounded-full bg-navy-50 text-navy-700">Email Campaign</span>
-                  <span className="text-navy-500 text-sm">2023</span>
+                  <span className="text-xs font-medium py-1 px-2 rounded-full bg-navy-50 text-navy-700">{t("portfolio.project2.type")}</span>
+                  <span className="text-navy-500 text-sm">{t("portfolio.project2.year")}</span>
                 </div>
-                <h3 className="text-xl font-medium mb-2">GrowthBound Nurture Sequence</h3>
+                <h3 className="text-xl font-medium mb-2">{t("portfolio.project2.title")}</h3>
                 <p className="text-navy-600 mb-4">
-                  A 5-part email nurture sequence that increased conversion rates by 45% for a B2B service company.
+                  {t("portfolio.project2.description")}
                 </p>
                 <a href="#" className="text-navy-700 font-medium flex items-center hover:text-navy-500 transition">
-                  View Project <ExternalLink className="ml-1 h-4 w-4" />
+                  {t("portfolio.project2.link")} <ExternalLink className="ml-1 h-4 w-4" />
                 </a>
               </div>
             </div>
@@ -77,15 +80,15 @@ const Portfolio = () => {
               </div>
               <div className="p-6">
                 <div className="flex items-center justify-between mb-3">
-                  <span className="text-xs font-medium py-1 px-2 rounded-full bg-navy-50 text-navy-700">Social Media</span>
-                  <span className="text-navy-500 text-sm">2022</span>
+                  <span className="text-xs font-medium py-1 px-2 rounded-full bg-navy-50 text-navy-700">{t("portfolio.project3.type")}</span>
+                  <span className="text-navy-500 text-sm">{t("portfolio.project3.year")}</span>
                 </div>
-                <h3 className="text-xl font-medium mb-2">FitLife Brand Voice & Content</h3>
+                <h3 className="text-xl font-medium mb-2">{t("portfolio.project3.title")}</h3>
                 <p className="text-navy-600 mb-4">
-                  Social media content strategy and copy that doubled engagement for a fitness brand.
+                  {t("portfolio.project3.description")}
                 </p>
                 <a href="#" className="text-navy-700 font-medium flex items-center hover:text-navy-500 transition">
-                  View Project <ExternalLink className="ml-1 h-4 w-4" />
+                  {t("portfolio.project3.link")} <ExternalLink className="ml-1 h-4 w-4" />
                 </a>
               </div>
             </div>
@@ -100,15 +103,15 @@ const Portfolio = () => {
               </div>
               <div className="p-6">
                 <div className="flex items-center justify-between mb-3">
-                  <span className="text-xs font-medium py-1 px-2 rounded-full bg-navy-50 text-navy-700">Blog Content</span>
-                  <span className="text-navy-500 text-sm">2022</span>
+                  <span className="text-xs font-medium py-1 px-2 rounded-full bg-navy-50 text-navy-700">{t("portfolio.project4.type")}</span>
+                  <span className="text-navy-500 text-sm">{t("portfolio.project4.year")}</span>
                 </div>
-                <h3 className="text-xl font-medium mb-2">EcoLiving Blog Series</h3>
+                <h3 className="text-xl font-medium mb-2">{t("portfolio.project4.title")}</h3>
                 <p className="text-navy-600 mb-4">
-                  A 12-part blog series on sustainable living that established the brand as an industry authority.
+                  {t("portfolio.project4.description")}
                 </p>
                 <a href="#" className="text-navy-700 font-medium flex items-center hover:text-navy-500 transition">
-                  View Project <ExternalLink className="ml-1 h-4 w-4" />
+                  {t("portfolio.project4.link")} <ExternalLink className="ml-1 h-4 w-4" />
                 </a>
               </div>
             </div>
@@ -123,15 +126,15 @@ const Portfolio = () => {
               </div>
               <div className="p-6">
                 <div className="flex items-center justify-between mb-3">
-                  <span className="text-xs font-medium py-1 px-2 rounded-full bg-navy-50 text-navy-700">Landing Page</span>
-                  <span className="text-navy-500 text-sm">2022</span>
+                  <span className="text-xs font-medium py-1 px-2 rounded-full bg-navy-50 text-navy-700">{t("portfolio.project5.type")}</span>
+                  <span className="text-navy-500 text-sm">{t("portfolio.project5.year")}</span>
                 </div>
-                <h3 className="text-xl font-medium mb-2">FinEdge Product Launch</h3>
+                <h3 className="text-xl font-medium mb-2">{t("portfolio.project5.title")}</h3>
                 <p className="text-navy-600 mb-4">
-                  High-converting landing page copy for a fintech product launch that exceeded conversion targets.
+                  {t("portfolio.project5.description")}
                 </p>
                 <a href="#" className="text-navy-700 font-medium flex items-center hover:text-navy-500 transition">
-                  View Project <ExternalLink className="ml-1 h-4 w-4" />
+                  {t("portfolio.project5.link")} <ExternalLink className="ml-1 h-4 w-4" />
                 </a>
               </div>
             </div>
@@ -146,15 +149,15 @@ const Portfolio = () => {
               </div>
               <div className="p-6">
                 <div className="flex items-center justify-between mb-3">
-                  <span className="text-xs font-medium py-1 px-2 rounded-full bg-navy-50 text-navy-700">Brand Voice</span>
-                  <span className="text-navy-500 text-sm">2021</span>
+                  <span className="text-xs font-medium py-1 px-2 rounded-full bg-navy-50 text-navy-700">{t("portfolio.project6.type")}</span>
+                  <span className="text-navy-500 text-sm">{t("portfolio.project6.year")}</span>
                 </div>
-                <h3 className="text-xl font-medium mb-2">ModernHome Brand Guidelines</h3>
+                <h3 className="text-xl font-medium mb-2">{t("portfolio.project6.title")}</h3>
                 <p className="text-navy-600 mb-4">
-                  Complete brand voice and messaging guidelines for a home décor e-commerce brand.
+                  {t("portfolio.project6.description")}
                 </p>
                 <a href="#" className="text-navy-700 font-medium flex items-center hover:text-navy-500 transition">
-                  View Project <ExternalLink className="ml-1 h-4 w-4" />
+                  {t("portfolio.project6.link")} <ExternalLink className="ml-1 h-4 w-4" />
                 </a>
               </div>
             </div>
@@ -166,29 +169,29 @@ const Portfolio = () => {
       <section className="bg-cream-50 section">
         <div className="container-custom">
           <div className="text-center mb-12">
-            <h2 className="text-navy-800 mb-4">Client Results</h2>
+            <h2 className="text-navy-800 mb-4">{t("portfolio.results.title")}</h2>
             <p className="max-w-2xl mx-auto text-navy-700">
-              The impact of strategic copywriting on business outcomes.
+              {t("portfolio.results.subtitle")}
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Result 1 */}
             <div className="bg-white p-8 rounded-lg shadow-sm text-center">
-              <div className="text-3xl font-serif font-medium text-navy-700 mb-2">45%</div>
-              <p className="text-navy-600">Average increase in email open rates</p>
+              <div className="text-3xl font-serif font-medium text-navy-700 mb-2">{t("portfolio.results.stat1.number")}</div>
+              <p className="text-navy-600">{t("portfolio.results.stat1.text")}</p>
             </div>
             
             {/* Result 2 */}
             <div className="bg-white p-8 rounded-lg shadow-sm text-center">
-              <div className="text-3xl font-serif font-medium text-navy-700 mb-2">120%</div>
-              <p className="text-navy-600">Growth in organic website traffic</p>
+              <div className="text-3xl font-serif font-medium text-navy-700 mb-2">{t("portfolio.results.stat2.number")}</div>
+              <p className="text-navy-600">{t("portfolio.results.stat2.text")}</p>
             </div>
             
             {/* Result 3 */}
             <div className="bg-white p-8 rounded-lg shadow-sm text-center">
-              <div className="text-3xl font-serif font-medium text-navy-700 mb-2">85%</div>
-              <p className="text-navy-600">Increase in landing page conversions</p>
+              <div className="text-3xl font-serif font-medium text-navy-700 mb-2">{t("portfolio.results.stat3.number")}</div>
+              <p className="text-navy-600">{t("portfolio.results.stat3.text")}</p>
             </div>
           </div>
         </div>
@@ -199,12 +202,12 @@ const Portfolio = () => {
         <div className="container-custom">
           <div className="bg-navy-700 text-white rounded-xl p-8 md:p-12">
             <div className="max-w-3xl mx-auto text-center">
-              <h2 className="mb-4">Ready to Create Your Success Story?</h2>
+              <h2 className="mb-4">{t("portfolio.cta.title")}</h2>
               <p className="text-slate-200 mb-8">
-                Let's work together to craft copy that delivers outstanding results for your business.
+                {t("portfolio.cta.subtitle")}
               </p>
               <Link to="/contact" className="bg-cream-400 text-navy-900 hover:bg-cream-300 px-8 py-3 rounded-md font-medium text-lg transition duration-300 inline-block">
-                Start Your Project
+                {t("portfolio.cta.button")}
               </Link>
             </div>
           </div>
