@@ -1,8 +1,8 @@
-
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Layout from '@/components/Layout';
 import { Mail, Phone, MapPin, Send, ExternalLink } from 'lucide-react';
 import { toast } from '@/components/ui/use-toast';
+import emailjs from 'emailjs-com';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -13,6 +13,12 @@ const Contact = () => {
     service: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [emailJSInitialized, setEmailJSInitialized] = useState(false);
+
+  useEffect(() => {
+    emailjs.init("YOUR_USER_ID");
+    setEmailJSInitialized(true);
+  }, []);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
@@ -23,13 +29,27 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate API call
-    setTimeout(() => {
-      setIsSubmitting(false);
+    try {
+      const templateParams = {
+        to_email: 'liviu3667@gmail.com',
+        from_name: formData.name,
+        from_email: formData.email,
+        subject: formData.subject,
+        message: formData.message,
+        service: formData.service,
+      };
+
+      await emailjs.send(
+        'YOUR_SERVICE_ID',
+        'YOUR_TEMPLATE_ID',
+        templateParams
+      );
+
       toast({
         title: "Message Sent!",
         description: "Thank you for reaching out. I'll get back to you soon.",
       });
+
       setFormData({
         name: '',
         email: '',
@@ -37,12 +57,20 @@ const Contact = () => {
         message: '',
         service: ''
       });
-    }, 1500);
+    } catch (error) {
+      console.error('Error sending email:', error);
+      toast({
+        title: "Error",
+        description: "Failed to send your message. Please try again later.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
     <Layout>
-      {/* Hero Section */}
       <section className="bg-navy-700 text-white py-16">
         <div className="container-custom">
           <h1 className="text-center mb-4">Contact Me</h1>
@@ -52,11 +80,9 @@ const Contact = () => {
         </div>
       </section>
 
-      {/* Contact Section */}
       <section className="section">
         <div className="container-custom">
           <div className="grid md:grid-cols-2 gap-12">
-            {/* Contact Info */}
             <div>
               <h2 className="text-navy-800 mb-6">Get in Touch</h2>
               <p className="text-navy-700 mb-8">
@@ -122,12 +148,10 @@ const Contact = () => {
               </div>
             </div>
             
-            {/* Contact Form */}
             <div>
               <div className="bg-white p-6 rounded-lg shadow-sm border border-slate-100">
                 <h2 className="text-navy-800 mb-6">Send a Message</h2>
                 <form onSubmit={handleSubmit} className="space-y-6">
-                  {/* Name */}
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium mb-1 text-navy-700">
                       Name
@@ -143,7 +167,6 @@ const Contact = () => {
                     />
                   </div>
                   
-                  {/* Email */}
                   <div>
                     <label htmlFor="email" className="block text-sm font-medium mb-1 text-navy-700">
                       Email
@@ -159,7 +182,6 @@ const Contact = () => {
                     />
                   </div>
                   
-                  {/* Service */}
                   <div>
                     <label htmlFor="service" className="block text-sm font-medium mb-1 text-navy-700">
                       Service Interested In
@@ -180,7 +202,6 @@ const Contact = () => {
                     </select>
                   </div>
                   
-                  {/* Subject */}
                   <div>
                     <label htmlFor="subject" className="block text-sm font-medium mb-1 text-navy-700">
                       Subject
@@ -196,7 +217,6 @@ const Contact = () => {
                     />
                   </div>
                   
-                  {/* Message */}
                   <div>
                     <label htmlFor="message" className="block text-sm font-medium mb-1 text-navy-700">
                       Message
@@ -214,9 +234,9 @@ const Contact = () => {
                   
                   <button
                     type="submit"
-                    disabled={isSubmitting}
+                    disabled={isSubmitting || !emailJSInitialized}
                     className={`w-full py-3 px-4 bg-navy-600 text-white rounded-md font-medium flex items-center justify-center transition ${
-                      isSubmitting ? 'opacity-75 cursor-not-allowed' : 'hover:bg-navy-700'
+                      isSubmitting || !emailJSInitialized ? 'opacity-75 cursor-not-allowed' : 'hover:bg-navy-700'
                     }`}
                   >
                     {isSubmitting ? (
@@ -234,7 +254,6 @@ const Contact = () => {
         </div>
       </section>
       
-      {/* FAQ Section */}
       <section className="bg-cream-50 section">
         <div className="container-custom">
           <div className="text-center mb-12">
@@ -245,7 +264,6 @@ const Contact = () => {
           </div>
           
           <div className="max-w-3xl mx-auto grid gap-6">
-            {/* FAQ Item 1 */}
             <div className="bg-white p-6 rounded-lg shadow-sm">
               <h3 className="text-lg font-medium mb-2">What is your process for starting a new project?</h3>
               <p className="text-navy-600">
@@ -253,7 +271,6 @@ const Contact = () => {
               </p>
             </div>
             
-            {/* FAQ Item 2 */}
             <div className="bg-white p-6 rounded-lg shadow-sm">
               <h3 className="text-lg font-medium mb-2">How do you charge for your services?</h3>
               <p className="text-navy-600">
@@ -261,7 +278,6 @@ const Contact = () => {
               </p>
             </div>
             
-            {/* FAQ Item 3 */}
             <div className="bg-white p-6 rounded-lg shadow-sm">
               <h3 className="text-lg font-medium mb-2">How many revisions are included in your service?</h3>
               <p className="text-navy-600">
@@ -269,7 +285,6 @@ const Contact = () => {
               </p>
             </div>
             
-            {/* FAQ Item 4 */}
             <div className="bg-white p-6 rounded-lg shadow-sm">
               <h3 className="text-lg font-medium mb-2">What is the typical turnaround time for projects?</h3>
               <p className="text-navy-600">
