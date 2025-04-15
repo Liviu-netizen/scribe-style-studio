@@ -1,9 +1,8 @@
 
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Layout from '@/components/Layout';
 import { Mail, Phone, MapPin, Send, ExternalLink } from 'lucide-react';
 import { toast } from '@/components/ui/use-toast';
-import emailjs from 'emailjs-com';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -13,45 +12,34 @@ const Contact = () => {
     message: '',
     service: ''
   });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [emailJSInitialized, setEmailJSInitialized] = useState(false);
-
-  useEffect(() => {
-    // Initialize EmailJS with the public key
-    emailjs.init("liviu3667@gmail.com");
-    setEmailJSInitialized(true);
-  }, []);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData(prevState => ({ ...prevState, [name]: value }));
   };
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setIsSubmitting(true);
     
     try {
-      const templateParams = {
-        to_email: 'orders@liviuthecopywriter.com',
-        from_name: formData.name,
-        from_email: formData.email,
-        subject: formData.subject,
-        message: formData.message,
-        service: formData.service,
-      };
-
-      await emailjs.send(
-        'service_az9nnbo',
-        'template_contact',
-        templateParams
+      // Create mailto URL with form data
+      const subject = encodeURIComponent(`Website Contact: ${formData.subject}`);
+      const body = encodeURIComponent(
+        `Name: ${formData.name}\n` +
+        `Email: ${formData.email}\n` +
+        `Service: ${formData.service}\n\n` +
+        `Message:\n${formData.message}`
       );
-
+      
+      // Open default mail client with pre-filled information
+      window.location.href = `mailto:orders@liviuthecopywriter.com?subject=${subject}&body=${body}`;
+      
       toast({
-        title: "Message Sent!",
-        description: "Thank you for reaching out. I'll get back to you soon.",
+        title: "Email Client Opened",
+        description: "Your message has been prepared in your email client. Please send it to complete your request.",
       });
 
+      // Clear form fields
       setFormData({
         name: '',
         email: '',
@@ -60,14 +48,12 @@ const Contact = () => {
         service: ''
       });
     } catch (error) {
-      console.error('Error sending email:', error);
+      console.error('Error:', error);
       toast({
         title: "Error",
-        description: "Failed to send your message. Please try again later.",
+        description: "There was an issue opening your email client. Please try again or contact us directly.",
         variant: "destructive",
       });
-    } finally {
-      setIsSubmitting(false);
     }
   };
 
@@ -98,7 +84,9 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="text-lg font-medium mb-1">Email</h3>
-                    <p className="text-navy-600">liviu3667@gmail.com</p>
+                    <a href="mailto:orders@liviuthecopywriter.com" className="text-navy-600 hover:text-navy-800 transition">
+                      orders@liviuthecopywriter.com
+                    </a>
                   </div>
                 </div>
                 
@@ -236,18 +224,9 @@ const Contact = () => {
                   
                   <button
                     type="submit"
-                    disabled={isSubmitting || !emailJSInitialized}
-                    className={`w-full py-3 px-4 bg-navy-600 text-white rounded-md font-medium flex items-center justify-center transition ${
-                      isSubmitting || !emailJSInitialized ? 'opacity-75 cursor-not-allowed' : 'hover:bg-navy-700'
-                    }`}
+                    className="w-full py-3 px-4 bg-navy-600 text-white rounded-md font-medium flex items-center justify-center transition hover:bg-navy-700"
                   >
-                    {isSubmitting ? (
-                      'Sending...'
-                    ) : (
-                      <>
-                        Send Message <Send className="ml-2 h-4 w-4" />
-                      </>
-                    )}
+                    Send Message <Send className="ml-2 h-4 w-4" />
                   </button>
                 </form>
               </div>
