@@ -21,7 +21,7 @@ const Footer = () => {
               <a href="#" className="text-white hover:text-cream-300 transition" aria-label="Instagram">
                 <Instagram size={20} />
               </a>
-              <a href="#" className="text-white hover:text-cream-300 transition" aria-label="LinkedIn">
+              <a href="https://www.linkedin.com/" className="text-white hover:text-cream-300 transition" aria-label="LinkedIn">
                 <Linkedin size={20} />
               </a>
             </div>
@@ -45,15 +45,15 @@ const Footer = () => {
             <div className="space-y-3 text-slate-300">
               <div className="flex items-start">
                 <Mail className="mr-2 h-5 w-5 shrink-0" />
-                <span>hello@liviumc.com</span>
+                <span>liviu3667@gmail.com</span>
               </div>
               <div className="flex items-start">
                 <Phone className="mr-2 h-5 w-5 shrink-0" />
-                <span>+1 (555) 123-4567</span>
+                <span>+40730377130</span>
               </div>
               <div className="flex items-start">
                 <MapPin className="mr-2 h-5 w-5 shrink-0" />
-                <span>Copywriting Studio, Word City</span>
+                <span>Bucharest, Romania</span>
               </div>
             </div>
           </div>

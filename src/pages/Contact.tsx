@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
 import Layout from '@/components/Layout';
-import { Mail, Phone, MapPin, Send } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, ExternalLink } from 'lucide-react';
 import { toast } from '@/components/ui/use-toast';
 
 const Contact = () => {
@@ -70,7 +70,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="text-lg font-medium mb-1">Email</h3>
-                    <p className="text-navy-600">hello@wordcraft.com</p>
+                    <p className="text-navy-600">liviu3667@gmail.com</p>
                   </div>
                 </div>
                 
@@ -80,7 +80,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="text-lg font-medium mb-1">Phone</h3>
-                    <p className="text-navy-600">+1 (555) 123-4567</p>
+                    <p className="text-navy-600">+40730377130</p>
                   </div>
                 </div>
                 
@@ -90,7 +90,19 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="text-lg font-medium mb-1">Location</h3>
-                    <p className="text-navy-600">123 Writing Lane, Word City</p>
+                    <p className="text-navy-600">Bucharest, Romania</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start">
+                  <div className="bg-navy-50 p-3 rounded-full mr-4">
+                    <ExternalLink className="text-navy-600 h-5 w-5" />
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-medium mb-1">Fiverr</h3>
+                    <a href="https://www.fiverr.com/username" target="_blank" rel="noopener noreferrer" className="text-navy-600 hover:text-navy-800 transition">
+                      Check out my services on Fiverr
+                    </a>
                   </div>
                 </div>
               </div>
