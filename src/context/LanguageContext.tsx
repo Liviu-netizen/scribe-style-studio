@@ -1,4 +1,3 @@
-
 import React, { createContext, useState, useContext, ReactNode } from 'react';
 
 // Define available languages
@@ -132,6 +131,34 @@ const translations = {
     "contact.alt.title": "Prefer a direct approach?",
     "contact.alt.email": "Email me at:",
     "contact.alt.phone": "Call me at:",
+    "contact.form.service": "Service Interested In",
+    "contact.form.select_service": "Select a service",
+    "contact.form.services.website": "Website Copywriting",
+    "contact.form.services.social": "Social Media Content",
+    "contact.form.services.email": "Email Marketing",
+    "contact.form.services.blog": "Blog & Content Writing",
+    "contact.form.services.other": "Other",
+    "contact.form.subject": "Subject",
+    "contact.form.success.title": "Email Client Opened",
+    "contact.form.success.description": "Your message has been prepared in your email client. Please send it to complete your request.",
+    "contact.form.error.title": "Error",
+    "contact.form.error.description": "There was an issue opening your email client. Please try again or contact us directly.",
+    "contact.hours.title": "Office Hours",
+    "contact.hours.weekdays": "Monday - Friday",
+    "contact.hours.weekday_time": "9:00 AM - 5:00 PM",
+    "contact.hours.weekend": "Saturday - Sunday",
+    "contact.hours.weekend_time": "Closed",
+    "contact.faq.title": "Frequently Asked Questions",
+    "contact.faq.subtitle": "Common questions about working with me.",
+    "contact.faq.q1": "What is your process for starting a new project?",
+    "contact.faq.a1": "We begin with an initial consultation to understand your needs, goals, and brand voice. From there, I'll create a proposal outlining the scope, timeline, and cost of the project. Once approved, I'll start the research phase before moving on to drafting and revisions.",
+    "contact.faq.q2": "How do you charge for your services?",
+    "contact.faq.a2": "I offer both project-based pricing and retainer packages depending on your needs. Project pricing is determined by scope, complexity, and timeline, while retainers provide ongoing support at a consistent monthly rate. I'm happy to discuss which option would be best for your specific situation.",
+    "contact.faq.q3": "How many revisions are included in your service?",
+    "contact.faq.a3": "All projects include two rounds of revisions to ensure the final copy meets your expectations. Additional revisions can be arranged at an hourly rate if needed, but most clients find that two rounds are sufficient to achieve the desired result.",
+    "contact.faq.q4": "What is the typical turnaround time for projects?",
+    "contact.faq.a4": "Turnaround time varies based on project scope and complexity. Small projects like email campaigns might take 1-2 weeks, while comprehensive website copy could take 3-4 weeks. I'll provide a specific timeline during our initial consultation and keep you updated on progress throughout the project.",
+    "contact.fiverr.link": "Check out my services on Fiverr",
 
     // Services page
     "services.hero.title": "My Services",
@@ -263,6 +290,34 @@ const translations = {
     "contact.alt.title": "Preferi o abordare directă?",
     "contact.alt.email": "Trimite-mi email la:",
     "contact.alt.phone": "Sună-mă la:",
+    "contact.form.service": "Servicii care te interesează",
+    "contact.form.select_service": "Selectează un serviciu",
+    "contact.form.services.website": "Copywriting pentru Website",
+    "contact.form.services.social": "Conținut pentru Social Media",
+    "contact.form.services.email": "Email Marketing",
+    "contact.form.services.blog": "Scriere Blog și Conținut",
+    "contact.form.services.other": "Altele",
+    "contact.form.subject": "Subiect",
+    "contact.form.success.title": "Client Email Deschis",
+    "contact.form.success.description": "Mesajul tău a fost pregătit în clientul tău de email. Te rog să îl trimiți pentru a finaliza cererea ta.",
+    "contact.form.error.title": "Eroare",
+    "contact.form.error.description": "A apărut o problemă la deschiderea clientului tău de email. Te rog încearcă din nou sau contactează-ne direct.",
+    "contact.hours.title": "Program de Lucru",
+    "contact.hours.weekdays": "Luni - Vineri",
+    "contact.hours.weekday_time": "9:00 - 17:00",
+    "contact.hours.weekend": "Sâmbătă - Duminică",
+    "contact.hours.weekend_time": "Închis",
+    "contact.faq.title": "Întrebări Frecvente",
+    "contact.faq.subtitle": "Întrebări comune despre colaborarea cu mine.",
+    "contact.faq.q1": "Care este procesul tău pentru începerea unui nou proiect?",
+    "contact.faq.a1": "Începem cu o consultație inițială pentru a înțelege nevoile, obiectivele și vocea brandului tău. De acolo, voi crea o propunere care evidențiază scopul, cronologie și costul proiectului. Odată aprobat, voi începe faza de cercetare înainte de a trece la redactare și revizuiri.",
+    "contact.faq.q2": "Cum taxezi serviciile tale?",
+    "contact.faq.a2": "Ofer atât prețuri bazate pe proiect, cât și pachete de retenție, în funcție de nevoile tale. Prețul proiectului este determinat de scop, complexitate și cronologie, în timp ce retenția oferă asistență continuă la o rată lunară constantă. Sunt bucuros să discutăm ce opțiune ar fi cea mai potrivită pentru situația ta specifică.",
+    "contact.faq.q3": "Câte revizuiri sunt incluse în serviciul tău?",
+    "contact.faq.a3": "Toate proiectele includ două runde de revizuiri pentru a ne asigura că textul final îndeplinește așteptările tale. Revizuiri suplimentare pot fi aranjate la un tarif orar dacă este necesar, dar majoritatea clienților consideră că două runde sunt suficiente pentru a obține rezultatul dorit.",
+    "contact.faq.q4": "Care este timpul tipic de livrare pentru proiecte?",
+    "contact.faq.a4": "Timpul de livrare variază în funcție de amploarea și complexitatea proiectului. Proiectele mici, cum ar fi campaniile de email, pot dura 1-2 săptămâni, în timp ce textul complet pentru un site web ar putea dura 3-4 săptămâni. Voi oferi un termen specific în timpul consultației inițiale și te voi ține la curent cu progresul pe tot parcursul proiectului.",
+    "contact.fiverr.link": "Verifică serviciile mele pe Fiverr",
 
     // Services page
     "services.hero.title": "Serviciile mele",
@@ -319,4 +374,3 @@ export const LanguageProvider: React.FC<{ children: ReactNode }> = ({ children }
 
 // Hook to use the language context
 export const useLanguage = () => useContext(LanguageContext);
-

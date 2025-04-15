@@ -50,7 +50,6 @@ const Portfolio = () => {
             {/* Project 2 */}
             <div className="bg-white border border-slate-100 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition duration-300">
               <div className="aspect-video bg-slate-200">
-                {/* Replace with actual image when available */}
                 <div className="w-full h-full bg-gradient-to-br from-navy-200 to-navy-400 flex items-center justify-center text-white text-opacity-30 text-xl">
                   Project Image
                 </div>
@@ -73,7 +72,6 @@ const Portfolio = () => {
             {/* Project 3 */}
             <div className="bg-white border border-slate-100 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition duration-300">
               <div className="aspect-video bg-slate-200">
-                {/* Replace with actual image when available */}
                 <div className="w-full h-full bg-gradient-to-br from-navy-200 to-navy-400 flex items-center justify-center text-white text-opacity-30 text-xl">
                   Project Image
                 </div>
@@ -96,7 +94,6 @@ const Portfolio = () => {
             {/* Project 4 */}
             <div className="bg-white border border-slate-100 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition duration-300">
               <div className="aspect-video bg-slate-200">
-                {/* Replace with actual image when available */}
                 <div className="w-full h-full bg-gradient-to-br from-navy-200 to-navy-400 flex items-center justify-center text-white text-opacity-30 text-xl">
                   Project Image
                 </div>
@@ -119,7 +116,6 @@ const Portfolio = () => {
             {/* Project 5 */}
             <div className="bg-white border border-slate-100 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition duration-300">
               <div className="aspect-video bg-slate-200">
-                {/* Replace with actual image when available */}
                 <div className="w-full h-full bg-gradient-to-br from-navy-200 to-navy-400 flex items-center justify-center text-white text-opacity-30 text-xl">
                   Project Image
                 </div>
@@ -142,7 +138,6 @@ const Portfolio = () => {
             {/* Project 6 */}
             <div className="bg-white border border-slate-100 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition duration-300">
               <div className="aspect-video bg-slate-200">
-                {/* Replace with actual image when available */}
                 <div className="w-full h-full bg-gradient-to-br from-navy-200 to-navy-400 flex items-center justify-center text-white text-opacity-30 text-xl">
                   Project Image
                 </div>
