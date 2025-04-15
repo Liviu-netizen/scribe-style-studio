@@ -3,16 +3,19 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Layout from '@/components/Layout';
 import { CheckCircle } from 'lucide-react';
+import { useLanguage } from '@/context/LanguageContext';
 
 const About = () => {
+  const { t } = useLanguage();
+  
   return (
     <Layout>
       {/* Hero Section */}
       <section className="bg-navy-700 text-white py-16">
         <div className="container-custom">
-          <h1 className="text-center mb-4">About Me</h1>
+          <h1 className="text-center mb-4">{t("about.hero.title")}</h1>
           <p className="max-w-2xl mx-auto text-center text-xl text-slate-200">
-            Passionate about turning words into results for businesses of all sizes.
+            {t("about.hero.subtitle")}
           </p>
         </div>
       </section>
@@ -38,18 +41,18 @@ const About = () => {
             </div>
             
             <div>
-              <h2 className="text-navy-800 mb-4">Crafting Compelling Copy Since 2015</h2>
+              <h2 className="text-navy-800 mb-4">{t("about.main.title")}</h2>
               <p className="text-navy-700 mb-6">
-                With over 8 years of experience in the industry, I specialize in creating strategic, audience-focused copy that drives engagement and conversions. My approach combines creativity with data-driven insights to deliver content that not only sounds good but performs exceptionally well.
+                {t("about.main.p1")}
               </p>
               <p className="text-navy-700 mb-6">
-                I've worked with businesses across various industries, from tech startups to established financial institutions, helping them communicate their value proposition and connect with their target audience through powerful words.
+                {t("about.main.p2")}
               </p>
               <p className="text-navy-700 mb-8">
-                My mission is simple: to transform your ideas into impactful messages that resonate with your audience and inspire action.
+                {t("about.main.p3")}
               </p>
               <Link to="/contact" className="btn-primary inline-block">
-                Let's Work Together
+                {t("about.main.cta")}
               </Link>
             </div>
           </div>
@@ -60,67 +63,67 @@ const About = () => {
       <section className="section bg-cream-50">
         <div className="container-custom">
           <div className="text-center mb-12">
-            <h2 className="text-navy-800 mb-4">Expertise & Skills</h2>
+            <h2 className="text-navy-800 mb-4">{t("about.expertise.title")}</h2>
             <p className="max-w-2xl mx-auto text-navy-700">
-              Leveraging experience and industry knowledge to deliver exceptional copy.
+              {t("about.expertise.subtitle")}
             </p>
           </div>
           
           <div className="grid md:grid-cols-3 gap-8">
             {/* Skill 1 */}
             <div className="bg-white p-6 rounded-lg shadow-sm">
-              <div className="text-navy-600 mb-4 text-xl font-medium font-serif">01</div>
-              <h3 className="text-xl mb-3">Brand Voice Development</h3>
+              <div className="text-navy-600 mb-4 text-xl font-medium font-serif">{t("about.expertise.skill1.number")}</div>
+              <h3 className="text-xl mb-3">{t("about.expertise.skill1.title")}</h3>
               <p className="text-navy-600">
-                Creating and refining distinctive brand voices that stand out in crowded markets and build strong connections with target audiences.
+                {t("about.expertise.skill1.description")}
               </p>
             </div>
             
             {/* Skill 2 */}
             <div className="bg-white p-6 rounded-lg shadow-sm">
-              <div className="text-navy-600 mb-4 text-xl font-medium font-serif">02</div>
-              <h3 className="text-xl mb-3">Conversion Copywriting</h3>
+              <div className="text-navy-600 mb-4 text-xl font-medium font-serif">{t("about.expertise.skill2.number")}</div>
+              <h3 className="text-xl mb-3">{t("about.expertise.skill2.title")}</h3>
               <p className="text-navy-600">
-                Writing persuasive, action-oriented copy that guides readers through the customer journey and encourages them to take specific steps.
+                {t("about.expertise.skill2.description")}
               </p>
             </div>
             
             {/* Skill 3 */}
             <div className="bg-white p-6 rounded-lg shadow-sm">
-              <div className="text-navy-600 mb-4 text-xl font-medium font-serif">03</div>
-              <h3 className="text-xl mb-3">SEO Content Strategy</h3>
+              <div className="text-navy-600 mb-4 text-xl font-medium font-serif">{t("about.expertise.skill3.number")}</div>
+              <h3 className="text-xl mb-3">{t("about.expertise.skill3.title")}</h3>
               <p className="text-navy-600">
-                Developing content that balances search engine optimization with engaging, value-driven information that serves both algorithms and human readers.
+                {t("about.expertise.skill3.description")}
               </p>
             </div>
           </div>
           
           <div className="mt-12 bg-white p-8 rounded-lg shadow-sm border border-slate-100">
-            <h3 className="text-xl mb-6">Industries I've Worked With</h3>
+            <h3 className="text-xl mb-6">{t("about.industries.title")}</h3>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
               <div className="flex items-center">
                 <CheckCircle className="text-navy-600 mr-2 h-5 w-5" />
-                <span>Technology & SaaS</span>
+                <span>{t("about.industries.industry1")}</span>
               </div>
               <div className="flex items-center">
                 <CheckCircle className="text-navy-600 mr-2 h-5 w-5" />
-                <span>E-commerce</span>
+                <span>{t("about.industries.industry2")}</span>
               </div>
               <div className="flex items-center">
                 <CheckCircle className="text-navy-600 mr-2 h-5 w-5" />
-                <span>Finance & Fintech</span>
+                <span>{t("about.industries.industry3")}</span>
               </div>
               <div className="flex items-center">
                 <CheckCircle className="text-navy-600 mr-2 h-5 w-5" />
-                <span>Healthcare</span>
+                <span>{t("about.industries.industry4")}</span>
               </div>
               <div className="flex items-center">
                 <CheckCircle className="text-navy-600 mr-2 h-5 w-5" />
-                <span>Education</span>
+                <span>{t("about.industries.industry5")}</span>
               </div>
               <div className="flex items-center">
                 <CheckCircle className="text-navy-600 mr-2 h-5 w-5" />
-                <span>Real Estate</span>
+                <span>{t("about.industries.industry6")}</span>
               </div>
             </div>
           </div>
@@ -132,12 +135,12 @@ const About = () => {
         <div className="container-custom">
           <div className="bg-navy-700 text-white rounded-xl p-8 md:p-12">
             <div className="max-w-3xl mx-auto text-center">
-              <h2 className="mb-4">Ready to Tell Your Story?</h2>
+              <h2 className="mb-4">{t("about.cta.title")}</h2>
               <p className="text-slate-200 mb-8">
-                Let me help you craft a narrative that engages your audience and achieves your business goals.
+                {t("about.cta.subtitle")}
               </p>
               <Link to="/contact" className="bg-cream-400 text-navy-900 hover:bg-cream-300 px-8 py-3 rounded-md font-medium text-lg transition duration-300 inline-block">
-                Get in Touch
+                {t("about.cta.button")}
               </Link>
             </div>
           </div>
