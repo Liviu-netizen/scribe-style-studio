@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import Layout from '@/components/Layout';
 import { Mail, Phone, MapPin, Send, ExternalLink } from 'lucide-react';
@@ -16,7 +17,8 @@ const Contact = () => {
   const [emailJSInitialized, setEmailJSInitialized] = useState(false);
 
   useEffect(() => {
-    emailjs.init("YOUR_USER_ID");
+    // Initialize EmailJS with the public key
+    emailjs.init("liviu3667@gmail.com");
     setEmailJSInitialized(true);
   }, []);
 
@@ -40,8 +42,8 @@ const Contact = () => {
       };
 
       await emailjs.send(
-        'YOUR_SERVICE_ID',
-        'YOUR_TEMPLATE_ID',
+        'service_az9nnbo', // Your actual service ID from the screenshot
+        'template_contact', // You'll need to create this template in EmailJS
         templateParams
       );
 
