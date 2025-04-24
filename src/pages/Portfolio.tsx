@@ -1,9 +1,9 @@
-
 import React from 'react';
 import Layout from '@/components/Layout';
 import { Link } from 'react-router-dom';
-import { ExternalLink, ArrowRight } from 'lucide-react';
+import { ExternalLink } from 'lucide-react';
 import { useLanguage } from '@/context/LanguageContext';
+import { AspectRatio } from '@/components/ui/aspect-ratio';
 
 const Portfolio = () => {
   const { t } = useLanguage();
@@ -24,14 +24,15 @@ const Portfolio = () => {
       <section className="section">
         <div className="container-custom">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Project 1 */}
+            {/* Project 1 (SaaS Tech) */}
             <div className="bg-white border border-slate-100 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition duration-300">
-              <div className="aspect-video bg-slate-200">
-                {/* Replace with actual image when available */}
-                <div className="w-full h-full bg-gradient-to-br from-navy-200 to-navy-400 flex items-center justify-center text-white text-opacity-30 text-xl">
-                  Project Image
-                </div>
-              </div>
+              <AspectRatio ratio={16 / 9}>
+                <img 
+                  src="/lovable-uploads/044bd646-ff08-428b-ac26-163ab10e7d66.png" 
+                  alt={t("portfolio.project1.title")} 
+                  className="w-full h-full object-cover"
+                />
+              </AspectRatio>
               <div className="p-6">
                 <div className="flex items-center justify-between mb-3">
                   <span className="text-xs font-medium py-1 px-2 rounded-full bg-navy-50 text-navy-700">{t("portfolio.project1.type")}</span>
