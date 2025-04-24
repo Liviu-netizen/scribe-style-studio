@@ -52,7 +52,7 @@ const Portfolio = () => {
                   <DialogContent className="max-w-[90vw] max-h-[90vh] p-0">
                     <DialogTitle className="sr-only">{t("portfolio.project1.title")}</DialogTitle>
                     <img 
-                      src="/lovable-uploads/ea5b8fb8-110c-48c1-8674-51b34cd6981e.png"
+                      src="/lovable-uploads/43ea12ba-7675-4a5b-b391-f9c15bf811b1.png"
                       alt={t("portfolio.project1.title")}
                       className="w-full h-full object-contain"
                     />
