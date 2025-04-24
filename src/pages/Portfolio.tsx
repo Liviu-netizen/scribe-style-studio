@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { ExternalLink, Maximize } from 'lucide-react';
 import { useLanguage } from '@/context/LanguageContext';
 import { AspectRatio } from '@/components/ui/aspect-ratio';
-import { Dialog, DialogContent, DialogTrigger } from '@/components/ui/dialog';
+import { Dialog, DialogContent, DialogTrigger, DialogTitle } from '@/components/ui/dialog';
 
 const Portfolio = () => {
   const { t } = useLanguage();
@@ -27,29 +27,13 @@ const Portfolio = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Project 1 (SaaS Tech) */}
             <div className="bg-white border border-slate-100 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition duration-300">
-              <Dialog>
-                <DialogTrigger asChild>
-                  <div className="group relative cursor-pointer">
-                    <AspectRatio ratio={16 / 9}>
-                      <img 
-                        src="/lovable-uploads/044bd646-ff08-428b-ac26-163ab10e7d66.png" 
-                        alt={t("portfolio.project1.title")} 
-                        className="w-full h-full object-cover"
-                      />
-                    </AspectRatio>
-                    <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300 flex items-center justify-center">
-                      <Maximize className="text-white opacity-0 group-hover:opacity-100 transition-opacity h-8 w-8" />
-                    </div>
-                  </div>
-                </DialogTrigger>
-                <DialogContent className="max-w-[90vw] max-h-[90vh] p-0">
-                  <img 
-                    src="/lovable-uploads/044bd646-ff08-428b-ac26-163ab10e7d66.png"
-                    alt={t("portfolio.project1.title")}
-                    className="w-full h-full object-contain"
-                  />
-                </DialogContent>
-              </Dialog>
+              <AspectRatio ratio={16 / 9}>
+                <img 
+                  src="/lovable-uploads/044bd646-ff08-428b-ac26-163ab10e7d66.png" 
+                  alt={t("portfolio.project1.title")} 
+                  className="w-full h-full object-cover"
+                />
+              </AspectRatio>
               <div className="p-6">
                 <div className="flex items-center justify-between mb-3">
                   <span className="text-xs font-medium py-1 px-2 rounded-full bg-navy-50 text-navy-700">{t("portfolio.project1.type")}</span>
@@ -59,9 +43,21 @@ const Portfolio = () => {
                 <p className="text-navy-600 mb-4">
                   {t("portfolio.project1.description")}
                 </p>
-                <a href="#" className="text-navy-700 font-medium flex items-center hover:text-navy-500 transition">
-                  {t("portfolio.project1.link")} <ExternalLink className="ml-1 h-4 w-4" />
-                </a>
+                <Dialog>
+                  <DialogTrigger asChild>
+                    <button className="text-navy-700 font-medium flex items-center hover:text-navy-500 transition">
+                      {t("portfolio.project1.link")} <ExternalLink className="ml-1 h-4 w-4" />
+                    </button>
+                  </DialogTrigger>
+                  <DialogContent className="max-w-[90vw] max-h-[90vh] p-0">
+                    <DialogTitle className="sr-only">{t("portfolio.project1.title")}</DialogTitle>
+                    <img 
+                      src="/lovable-uploads/ea5b8fb8-110c-48c1-8674-51b34cd6981e.png"
+                      alt={t("portfolio.project1.title")}
+                      className="w-full h-full object-contain"
+                    />
+                  </DialogContent>
+                </Dialog>
               </div>
             </div>
             
