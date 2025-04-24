@@ -49,12 +49,12 @@ const Portfolio = () => {
                       {t("portfolio.project1.link")} <ExternalLink className="ml-1 h-4 w-4" />
                     </button>
                   </DialogTrigger>
-                  <DialogContent className="max-w-[90vw] max-h-[90vh] p-0">
+                  <DialogContent className="max-w-[95vw] max-h-[95vh] w-auto h-auto p-0 overflow-hidden bg-transparent border-0">
                     <DialogTitle className="sr-only">{t("portfolio.project1.title")}</DialogTitle>
                     <img 
                       src="/lovable-uploads/43ea12ba-7675-4a5b-b391-f9c15bf811b1.png"
                       alt={t("portfolio.project1.title")}
-                      className="w-full h-full object-contain"
+                      className="w-auto h-auto max-w-full max-h-full object-contain"
                     />
                   </DialogContent>
                 </Dialog>
