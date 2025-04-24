@@ -15,8 +15,8 @@ const Portfolio = () => {
       title: t("portfolio.project1.title"),
       description: t("portfolio.project1.description"),
       linkText: t("portfolio.project1.link"),
-      thumbnailUrl: "/lovable-uploads/044bd646-ff08-428b-ac26-163ab10e7d66.png",
-      fullImageUrl: "/lovable-uploads/43ea12ba-7675-4a5b-b391-f9c15bf811b1.png"
+      thumbnailUrl: "https://i.ibb.co/YFzg2Hsy/Saa-S-Landing-Portofolio-Fin.jpg",
+      fullImageUrl: "https://i.ibb.co/YFzg2Hsy/Saa-S-Landing-Portofolio-Fin.jpg"
     },
     {
       type: t("portfolio.project2.type"),
