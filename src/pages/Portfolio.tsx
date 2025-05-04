@@ -23,9 +23,7 @@ const Portfolio = () => {
       year: t("portfolio.project2.year"),
       title: t("portfolio.project2.title"),
       description: t("portfolio.project2.description"),
-      linkText: t("portfolio.project2.link"),
-      thumbnailUrl: "/lovable-uploads/63639045-df7b-4998-adef-000e8f417613.png",
-      fullImageUrl: "/lovable-uploads/63639045-df7b-4998-adef-000e8f417613.png"
+      linkText: t("portfolio.project2.link")
     },
     {
       type: t("portfolio.project3.type"),
