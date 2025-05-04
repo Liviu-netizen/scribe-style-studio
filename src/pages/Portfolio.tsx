@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Layout from '@/components/Layout';
 import { useLanguage } from '@/context/LanguageContext';
@@ -26,7 +25,7 @@ const Portfolio = () => {
       description: t("portfolio.project2.description"),
       linkText: t("portfolio.project2.link"),
       thumbnailUrl: "https://i.ibb.co/Jjzgp5q/Design-f-r-titlu.png",
-      fullImageUrl: "https://ibb.co/Jjzgp5q5"
+      fullImageUrl: "https://i.ibb.co/Jjzgp5q/Design-f-r-titlu.png"
     },
     {
       type: t("portfolio.project3.type"),
