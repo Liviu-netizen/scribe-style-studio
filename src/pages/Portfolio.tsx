@@ -26,7 +26,7 @@ const Portfolio = () => {
       description: t("portfolio.project2.description"),
       linkText: t("portfolio.project2.link"),
       thumbnailUrl: "https://i.ibb.co/Jjzgp5q/Design-f-r-titlu.png",
-      fullImageUrl: "https://i.ibb.co/Jjzgp5q/Design-f-r-titlu.png"
+      fullImageUrl: "https://ibb.co/Jjzgp5q5"
     },
     {
       type: t("portfolio.project3.type"),
